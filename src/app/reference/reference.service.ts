@@ -9,10 +9,10 @@ import {Usure} from "../usure/usure";
 })
 export class ReferenceService {
 
-  public referenceDataListEvent: EventEmitter<Usure[]> = new EventEmitter<Usure[]>();
+  public referenceDataListEvent: EventEmitter<Reference[]> = new EventEmitter<Reference[]>();
   public referenceDeleteEvent: EventEmitter<boolean> = new EventEmitter<boolean>();
-  public referenceUpdateEvent: EventEmitter<Usure> = new EventEmitter<Usure>();
-  public referenceElementSelectedEvent: EventEmitter<Usure> = new EventEmitter<Usure>();
+  public referenceUpdateEvent: EventEmitter<Reference> = new EventEmitter<Reference>();
+  public referenceElementSelectedEvent: EventEmitter<Reference> = new EventEmitter<Reference>();
 
   SERVER_URL: string = "http://localhost:8080/api/";
   constructor(private httpClient: HttpClient) { }
