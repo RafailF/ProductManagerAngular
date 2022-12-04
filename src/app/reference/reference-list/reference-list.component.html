@@ -1,0 +1,31 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">vehicle</th>
+    <th scope="col">Dimension</th>
+    <th scope="col">Operations</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let reference of references">
+    <th scope="row">{{reference.id}}</th>
+    <td>{{reference.vehicle}}</td>
+    <td>{{reference.dimension}}</td>
+    <td>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+          Action
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" (click)="selectElement(reference)">Détail</a></li>
+          <li><a class="dropdown-item" (click)="updateReference(reference)">Modifier</a></li>
+          <li><a class="dropdown-item" (click)="deleteReference(reference)">Supprimer</a></li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>
+

@@ -1,0 +1,31 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">vehicle</th>
+    <th scope="col">rate</th>
+    <th scope="col">Operations</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let usure of usures">
+    <th scope="row">{{usure.id}}</th>
+    <td>{{usure.vehicle}}</td>
+    <td>{{usure.rate}}</td>
+    <td>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+          Action
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" (click)="selectElement(usure)">Détail</a></li>
+          <li><a class="dropdown-item" (click)="updateUsure(usure)">Modifier</a></li>
+          <li><a class="dropdown-item" (click)="deleteUsure(usure)">Supprimer</a></li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>
+

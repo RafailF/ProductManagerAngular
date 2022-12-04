@@ -1,0 +1,51 @@
+<!-- main app container -->
+<div class="card m-3">
+  <h5 class="card-header">Ajouter Usure</h5>
+  <div class="card-body">
+    <form [formGroup]="usureForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-2 mb-3">
+          <label class="form-label">id</label>
+          <input type="text" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['id'].errors }" />
+          <div *ngIf="submitted && f['id'].errors" class="invalid-feedback">
+            <div *ngIf="f['id'].errors?.['required']">Id is required</div>
+          </div>
+        </div>
+        <div class="col-3 mb-3">
+          <label class="form-label">Vehicle</label>
+          <input type="text" formControlName="vehicle" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['vehicle'].errors }" />
+          <div *ngIf="submitted && f['vehicle'].errors" class="invalid-feedback">
+            <div *ngIf="f['vehicle'].errors?.['required']">Vehicle is required</div>
+          </div>
+        </div>
+        <div class="col mb-3">
+          <label class="form-label">Rate</label>
+          <select formControlName="rate" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['rate'].errors }">
+            <option value=""></option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+          </select>
+          <div *ngIf="submitted && f['rate'].errors" class="invalid-feedback">
+            <div *ngIf="f['rate'].errors?.['required']">Rate is required</div>
+          </div>
+        </div>
+
+        <div class="col-5 mb-3">
+          <label class="form-label">image url</label>
+          <input type="text" formControlName="image" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['image'].errors }" />
+          <div *ngIf="submitted && f['image'].errors" class="invalid-feedback">
+            <div *ngIf="f['image'].errors?.['required']">Image is required</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button class="btn btn-primary me-2" *ngIf="!isUpdate">Add</button>
+        <button class="btn btn-primary me-2" *ngIf="isUpdate">Update</button>
+        <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
