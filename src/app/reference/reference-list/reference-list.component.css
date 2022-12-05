@@ -1,0 +1,11 @@
+
+table,
+td {
+  border: 1px solid  rgb(227, 226, 226);
+}
+
+thead,
+tfoot {
+  background-color: rgb(247, 247, 247);
+  color: rgb(48, 48, 48);
+}

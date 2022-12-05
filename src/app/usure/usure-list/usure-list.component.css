@@ -1,10 +1,11 @@
+
 table,
 td {
-  border: 1px solid #333;
+  border: 1px solid  rgb(227, 226, 226);
 }
 
 thead,
 tfoot {
-  background-color: #333;
-  color: #fff;
+  background-color: rgb(247, 247, 247);
+  color: rgb(48, 48, 48);
 }

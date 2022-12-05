@@ -1,1 +1,50 @@
 @import "~bootstrap/dist/css/bootstrap.css";
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+*{
+    font-family: Barlow-Bold;
+    letter-spacing:0.7px ;
+    font-weight: 400;
+}
+.text1{
+    font-size:36px; font-weight: bolder; color: rgb(3, 28, 60);
+}
+.mainButton{
+    background: rgb(246, 190, 0);
+    border: none;
+    padding: 9px 20px;
+}
+.mainButton:hover{
+    background: #e2ae00;
+    transition: 1s;
+    border-radius: 25px;
+    color: white;
+}
+
+.addButton{
+    background: rgb(238, 222, 168);
+    border: none;
+    padding: 9px 20px;
+}
+.addButton:hover{
+    background: #e2ae00;
+    transition: 1s;
+    border-radius: 25px;
+    color: white;
+}
+
+.cancelButton{
+    border: 1px solid rgb(244, 103, 103);
+    background: white;
+    padding: 8px 20px;
+    color: rgb(244, 103, 103);
+}
+.cancelButton:hover{
+    background-color: rgb(255, 159, 159);
+    color: white;
+    transition: 1s;
+    border-radius: 25px;
+}
+
+

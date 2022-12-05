@@ -1,10 +1,12 @@
+<h1 class="mt-5 text1" >List des analyses de références</h1>
+
 <table class="table">
   <thead>
   <tr>
-    <th scope="col">#</th>
-    <th scope="col">vehicle</th>
+    <th scope="col">#Id</th>
+    <th scope="col">Vehicule</th>
     <th scope="col">Dimension</th>
-    <th scope="col">Operations</th>
+    <th scope="col" class="text-center">Operations</th>
   </tr>
   </thead>
   <tbody>
@@ -13,8 +15,9 @@
     <td>{{reference.vehicle}}</td>
     <td>{{reference.dimension}}</td>
     <td>
+      <div class="d-flex justify-content-center" >
       <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+        <button class="mainButton dropdown-toggle" type="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
           Action
         </button>
@@ -24,6 +27,7 @@
           <li><a class="dropdown-item" (click)="deleteReference(reference)">Supprimer</a></li>
         </ul>
       </div>
+    </div>
     </td>
   </tr>
   </tbody>
