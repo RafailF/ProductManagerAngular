@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {ReferenceService} from "../reference.service";
 import {Reference} from "../reference";
@@ -8,7 +8,7 @@ import {Reference} from "../reference";
   templateUrl: './reference-detail.component.html',
   styleUrls: ['./reference-detail.component.css']
 })
-export class ReferenceDetailComponent {
+export class ReferenceDetailComponent implements OnInit{
 
   referenceSelected: Reference = {};
 

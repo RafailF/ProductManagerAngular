@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
 import {UsureService} from "../usure.service";
 import {Usure} from "../usure";
 
@@ -11,7 +10,7 @@ import {Usure} from "../usure";
 export class UsureDetailComponent implements OnInit{
   usureSelected: Usure = {};
 
-  constructor(private route: ActivatedRoute, private usureService: UsureService) {
+  constructor(private usureService: UsureService) {
 
   }
 

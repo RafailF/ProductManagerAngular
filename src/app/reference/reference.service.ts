@@ -2,7 +2,6 @@ import {EventEmitter, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Reference} from "./reference";
-import {Usure} from "../usure/usure";
 
 @Injectable({
   providedIn: 'root'

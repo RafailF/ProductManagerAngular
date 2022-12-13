@@ -13,7 +13,6 @@ import { UsureDetailComponent } from './usure/usure-detail/usure-detail.componen
 import { InMemoryWebApiModule } from "angular-in-memory-web-api";
 import {DataService} from "./data.service";
 import {HttpClientModule} from "@angular/common/http";
-import {UsureService} from "./usure/usure.service";
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { ReferenceDetailComponent } from './reference/reference-detail/reference-detail.component';
@@ -34,6 +33,7 @@ import { ReferenceDetailComponent } from './reference/reference-detail/reference
   imports: [
     BrowserModule,
     AppRoutingModule,
+
     HttpClientModule,
     InMemoryWebApiModule.forRoot(DataService),
     ReactiveFormsModule
